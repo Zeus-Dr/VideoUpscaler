@@ -1,0 +1,320 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  
+  .container {
+    position: relative;
+    height: 100%;
+  }
+  
+  .card {
+    width: 100%;
+    height: 100vh;
+    background-color:rgba(238, 240, 219, 0.85);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+    transition: transform 0.5s ease-in-out;
+  }
+   
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  h2 {
+    color: #FFD700; /* Gold */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+
+.container[data-active-card="card-1"] .card:not(.active) {
+    transform: translateY(10%);
+  }
+  
+ 
+  .messages {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+.card-content {
+  padding: 40px;
+  color: #333;
+  margin: 1rem;
+  border-radius: 2.5rem;
+  font-family: 'Arial', sans-serif;
+  background-color: rgba(168, 118, 25, 0.5);
+}
+
+.upscaleit{
+  color: teal; 
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+.upload-container {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.upload-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #715b56;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.upload-button:hover {
+  background-color: #9b9e73;
+}
+
+.upload-button img {
+  vertical-align: middle;
+  margin-right: 10px;
+  fill: white; /* Set the SVG icon color to white */
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.video-container video {
+  width: 45%;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.upscale-container,
+.download-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%; /* Adjust the width to match the video width */
+}
+
+#upscale-button,
+#download-button {
+  background-color:#715b56;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+#upscale-button {
+  margin-inline: auto;
+}
+
+#download-button {
+  margin-inline: auto;
+}
+
+#upscale-button:hover,
+#download-button:hover {
+  background-color: #9b9e73;
+}
+
+.guidance-text ul li span {
+  font-weight: bold;
+}
+
+.guidance-text ul li span {
+  font-weight: bold;
+}
+
+.guidance-text ul li span:nth-child(1) {
+  color: #000000; /* Black */
+}
+
+.guidance-text ul li span:nth-child(2) {
+  color: #008080; /* Yellow */
+}
+
+.guidance-text ul li span:nth-child(3) {
+  color: #FF0000; /* Red */
+}
+
+.guidance-text ul li span:nth-child(4) {
+  color: #563D2D; /* brown*/
+}
+
+.guidance-text {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color:  rgba(238, 240, 219, 1.0);
+  color: #FFFFFF; /* White */
+  border-radius: 15px;
+}
+
+.guide-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: teal; /* Light Blue */
+  margin-bottom: 10px;
+}
+
+.guidance-text ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.guidance-text ul li {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+
+/*..................pop up welcome card............*/
+.popup-card {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(238, 240, 219, 0.89);
+  padding: 20px;
+  border-radius: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 80%; /* Set the width to 80% of the window width */
+  max-height: 80%; /* Set the maximum height to 80% of the window height */
+  overflow-y: auto; /* Allow vertical scrolling if content exceeds height */
+  transition: top 0.3s, width 0.3s, max-height 0.3s; /* Add smooth transition */
+}
+
+
+.popup-content {
+  text-align: left;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.greenish{
+  color:#6db4b4; 
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color:olive;
+  font-size: 1.5em;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+p {
+  color: black;
+  font-size: 1.1em;
+  line-height: 1;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+li {
+  color: black;
+}
+
+/*........for the slider........*/
+.slider-content {
+  display: flex;
+  overflow-x: hidden;
+}
+
+.slide {
+  flex: 1 0 100%; /* Each slide takes up the full width */
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide h3 {
+  margin-bottom: 10px;
+}
+
+.slide ul {
+  margin-left: 20px;
+}
+
+.slide p {
+  margin-top: 10px;
+}
+
+.slider-nav {
+  margin-top: 20px;
+}
+
+.slider-nav button {
+  background-color: #715b56;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 45px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.slider-nav button:hover {
+  background-color: #9b9e73;
+}
+
+
+/*........For Progress bar........*/
+.progress-container {
+  width: 100%;
+  background-color: #f3f3f3;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 30px;
+  background-color: #4caf50;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+
+/*........For Loader........*/
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+  margin-top: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

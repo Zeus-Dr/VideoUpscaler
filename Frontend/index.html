@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Upscaler</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="popup-card">
+  <div class="popup-content">
+    <span class="close-btn">&times;</span>
+    <h2 class="greenish">Video Upscaling Made Easy</h2>
+    <p>Enhance the quality of your videos with our cutting-edge upscaling technology. Say goodbye to pixelated videos and hello to crystal-clear, high-definition content.</p>
+    
+    <h3>How It Works</h3>
+    <p>Our upscaling process analyzes each frame of your video and uses advanced algorithms to interpolate additional pixels, resulting in sharper and more detailed images.</p>
+    
+    <h3>Key Features</h3>
+    <ul>
+      <li>Upscale videos up to 4K resolution</li>
+      <li>Automatic noise reduction for cleaner images</li>
+      <li>Real-time preview of upscaled content</li>
+      <li>Batch processing for efficiency</li>
+    </ul>
+    
+    <h3>Why Choose Us</h3>
+    <p>Our upscaling technology is backed by years of research and development, ensuring the highest quality results for your videos. Whether you're a content creator, filmmaker, or video enthusiast, our tool is designed to meet your upscaling needs.</p>
+    
+    <h3>Get Started Today</h3>
+    <p>Experience the difference with our video upscaling tool. Upload your video now and see the transformation!</p>
+  </div>
+</div>
+  
+<div class="container">
+   <div class="card ">
+    <div class="card-content">
+      <h2 class="upscaleit">Upscale it !</h2>
+     
+      <div class="upload-container">
+        <label for="file-upload" class="upload-button">
+          <img src="upload.svg" alt="Upload Icon">
+          Upload
+        </label>
+        <input type="file" id="file-upload" style="display: none;">
+        <span id="file-name">No file</span>
+      </div> 
+      
+      <div class="video-container">
+        <video id="original-video" controls poster="blurry.jpg">
+          <source src="" type="">
+          Your browser does not support the video tag.
+        </video>
+
+        <video id="upscaled-video" controls poster="unblurry.jpg">
+          <source src="" type="">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      
+      <div class="video-container">
+        <button id="upscale-button">Upscale</button>
+        <button id="download-button">Download</button>   
+      </div>    
+
+      <div id="loader" class="loader" style="display: none;"></div>
+      <div id="message" style="text-align: center; font-weight: bold; margin-bottom: 20px; font-size: large;">Hello</div> 
+
+      <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+
+      <div class="guidance-text">
+        <div class="slider-content">
+          <div class="slide">
+            <h3 class="guide-title">How do I do it ?</h3>
+            <ul>
+              <li><span style="color: #000000;">1.</span> Upload a video file using the "Upload" button above.</li>
+              <li><span style="color: #FFD700;">2.</span> Once the file is uploaded, click the "Upscale" button to start the upscaling process.</li>
+              <li><span style="color: #FF0000;">3.</span> After upscaling, the upscaled video will be displayed in the second video player.</li>
+              <li><span style="color: #563D2D;">4.</span> To download the upscaled video, click the "Download" button below the upscaled video player.</li>
+            </ul>
+          </div>
+          <div class="slide">
+            <h3 class="guide-title">About Us</h3>
+            <p>Our company is dedicated to providing cutting-edge video upscaling technology.</p>
+          </div>
+        </div>
+        <div class="slider-nav">
+          <button class="prev-slide">&lt;</button>
+          <button class="next-slide">&gt;</button>
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
