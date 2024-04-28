@@ -447,6 +447,7 @@ def main(args):
     #     help='Image extension. Options: auto | jpg | png, auto means using the same extension as inputs')
     # args = parser.parse_args()
 
+    
     args.input = args.input.rstrip('/').rstrip('\\')
     os.makedirs(args.output, exist_ok=True)
 
@@ -454,7 +455,8 @@ def main(args):
         is_video = True
     else:
         is_video = False
-
+    args.model_name = 'RealESRGAN_x4plus'
+    args.alpha_upsampler = 'realesrgan'
     if is_video and args.input.endswith('.flv'):
         mp4_path = args.input.replace('.flv', '.mp4')
         os.system(f'ffmpeg -i {args.input} -codec copy {mp4_path}')

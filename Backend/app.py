@@ -55,7 +55,7 @@ def upload_video():
         # Run inference asynchronously
         args = argparse.Namespace(
             input=file_path,
-            model_name='RealESRGAN_x4plus',
+            model_name='djgan',
             output='.\\DJGAN\\results',
             denoise_strength=0.5,
             outscale=4,
@@ -69,7 +69,6 @@ def upload_video():
             ffmpeg_bin='ffmpeg',
             extract_frame_first=False,
             num_process_per_gpu=1,
-            alpha_upsampler='realesrgan',
             ext='auto'
         )
         
